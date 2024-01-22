@@ -1,0 +1,23 @@
+//Семейство шрифта:
+$fontFamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//Цвет фона:
+$backgroundColor: #eaeaea;
+//Цвет кнопок
+$buttonColor: #db3535;
+//Цвет основного шрифта
+$fontCollorMine: #cf1e1e;
+//Цвет при наведении
+$colorHover: #b3b3b3;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    overflow: hidden;
+    /* filter: sepia(20%); */
+}
+.center {
+    padding-left: calc(100vw - 520px);
+    padding-right: calc(100vw - 520px);
+}

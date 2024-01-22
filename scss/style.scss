@@ -1,0 +1,514 @@
+@import "properties";
+//===================================================================
+/* ------------------ */
+/* Стили для particles */
+/* ------------------ */
+/* ---- reset ---- */
+body {
+    margin: 0;
+    font-family: $fontFamily;
+    font-weight: normal;
+    font-style: normal;
+}
+canvas {
+    display: block;
+    /* vertical-align: bottom; */
+}
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Цвет фона */
+    background-color: #eaeaea;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.js-count-particles {
+    font-size: 1.1em;
+}
+#stats,
+.count-particles {
+    /* -webkit-user-select: none; */
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+//===================================================================
+//===================================================================
+/* ------------------ */
+/* Стили для header */
+/* ------------------ */
+body {
+    margin: 0;
+    font-family: $fontFamily;
+}
+a {
+    text-decoration: none;
+    color: $buttonColor;
+    font-size: 24px;
+    &:hover {
+        color: $colorHover;
+    }
+}
+.site-header {
+    /* border: 1px solid #ccc; */
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 100;
+    width: 94vw;
+    margin: 30px;
+    border-radius: 10px;
+    /* background-color: rgb(110, 110, 110); */
+}
+.site-identity {
+    display: flex;
+    gap: 16px;
+}
+.site-navigation ul,
+.site-navigation li {
+    margin: 0;
+    padding: 0;
+}
+.site-navigation li {
+    display: inline-block;
+    margin: 1.4em 1em 1em 1em;
+}
+//===================================================================
+//===================================================================
+/* ------------------ */
+/* Стили для burger   */
+/* ------------------ */
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+.burger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    /* width: 40px;
+    height: 26px; */
+    width: 45px;
+    height: 26px;
+    /* margin: 30px auto; */
+}
+.burger::before,
+.burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #000;
+}
+.burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #000;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+.burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+}
+.burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+.burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+}
+//===================================================================
+//===================================================================
+
+/* ------------------ */
+/* Стили для userform */
+/* ------------------ */
+option, select {
+    font-size: 18px;
+}
+.userform {
+    display: flex;
+    top: 89%;
+    left: 50%;
+    transform: translate(-39.5%, 30%);
+    &__box {
+        padding: 16px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__hidden {
+        visibility: hidden;
+    }
+    &__title {
+        font-family: $fontFamily;
+        font-style: normal;
+        color: $fontCollorMine;
+        font-weight: normal;
+        font-size: 20px;
+    }
+    &__text {
+        font-family: $fontFamily;
+        font-weight: 400;
+    }
+    &__option {
+        font-family: $fontFamily;
+    }
+    &__select {
+        border: 2px solid #f2f2f2;
+        background-color: #fff;
+        font-size: 20px;
+    }
+    &__select-a {
+        width: 400px;
+        height: 50px;
+        line-height: 3em;
+        font-family: $fontFamily;
+        border-radius: 5px;
+        outline: none;
+    }
+    &__select-b {
+        width: 400px;
+        height: 50px;
+        line-height: 3em;
+        font-family: $fontFamily;
+        border-radius: 5px;
+        outline: none;
+        /* text-indent: 50%; */
+    }
+    &__select-c {
+        width: 400px;
+        height: 50px;
+        line-height: 3em;
+        font-family: $fontFamily;
+        border-radius: 5px;
+        outline: none;
+        /* text-indent: 50%; */
+    }
+    &__select-d {
+        width: 400px;
+        height: 50px;
+        line-height: 3em;
+        font-family: $fontFamily;
+        border-radius: 5px;
+        outline: none;
+        /* text-indent: 50%; */
+    }
+    &__select-i {
+        width: 400px;
+        height: 46px;
+        line-height: 3em;
+        font-family: $fontFamily;
+        border-radius: 5px;
+        outline: none;
+        /* text-indent: 50%; */
+    }
+    &__text {
+        font-family: $fontFamily;
+        font-size: 16px;
+    }
+    &__button {
+        width: 400px;
+        height: 50px;
+        margin-top: 20px;
+        background-color: #db3535;
+        border-radius: 8px;
+        color: #d3d3d3;
+        border: 1px solid #d3d3d3;
+        font-size: 20px;
+        &:hover {
+            background-color: #8f8f8f;
+            /* width: 402px;
+            height: 52px; */
+            cursor: pointer;
+        }
+    }
+}
+input {
+    height: 50px;
+}
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+:root {
+    --text-color: hsla(210, 50%, 85%, 1);
+    --shadow-color: hsla(210, 40%, 52%, .4);
+    --btn-color: hsl(210, 80%, 42%);
+    --bg-color: #141218;
+}
+button {
+    position:relative;
+    padding: 10px 20px;  
+    border: none;
+    background: none;
+    cursor: pointer;
+    /* font-family: "Source Code Pro"; */
+    font-family: $fontFamily;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 30px;  
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    box-shadow: var(--shadow-color) 2px 2px 22px;
+    border-radius: 4px; 
+    z-index: 0;  
+    overflow: hidden;
+    &:active {
+        background: #fff;
+        color: #000;
+    }   
+}
+/* bubbles */
+/* button::before {
+    content: '';
+    pointer-events: none;
+    opacity: .6;
+    background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: bubbles 5s linear infinite both;
+} */
+/* @keyframes bubbles {
+    from {
+    transform: translate();
+    }
+    to {
+    transform: translate(0, -66.666%);
+    }
+} */
+//===================================================================
+//===================================================================
+//<!-- --------------------------- -->
+//<!-- -----Переключатель тем----- -->
+//<!-- --------------------------- -->
+$toggle-background-color-on: #e36161;
+$toggle-background-color-off: darkgray;
+$toggle-control-color: white;
+$toggle-width: 50px;
+$toggle-height: 25px;
+$toggle-gutter: 5px;
+$toggle-radius: 50%;
+$toggle-control-speed: .15s;
+$toggle-control-ease: ease-in;
+
+// These are our computed variables
+// change at your own risk.
+$toggle-radius: $toggle-height / 2;
+$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+
+.toggle-control {
+    display: block;
+    position: relative;
+    padding-left: $toggle-width;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    top: 19px;
+    left: 134px;
+    transform: translate(0%, 30%);
+input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+input:checked ~ .control {
+    background-color: $toggle-background-color-on;
+    
+    &:after {
+        left: $toggle-width - $toggle-control-size - $toggle-gutter;
+    }
+}
+
+.toggle-control input:checked ~ .userform__button {
+    background-color: rgb(237, 228, 56);
+}
+
+.control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $toggle-height;
+    width: $toggle-width;
+    border-radius: $toggle-radius;
+    background-color: $toggle-background-color-off;
+    transition: background-color $toggle-control-speed $toggle-control-ease;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: $toggle-gutter;
+        top: $toggle-gutter;
+        width: $toggle-control-size;
+        height: $toggle-control-size;
+        border-radius: $toggle-radius;
+        background: $toggle-control-color;
+        transition: left $toggle-control-speed $toggle-control-ease;
+    }
+}
+}
+
+//===================================================================
+//===================================================================
+//<!-- --------------------------- -->
+//<!-- --Социальное меню---------- -->
+//<!-- --------------------------- -->
+//Вариант 2
+body {
+    margin:0;
+    padding:0;
+    background: #ebebeb;
+}
+ul {
+    position:absolute;
+    top:89%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    display:flex;
+}
+ul li {
+    list-style:none;
+}
+ul li a {
+    display:block;
+    position:relative;
+    width:50px;
+    height:50px;
+    line-height:46px;
+    /* font-size:40px; */
+    text-align:center;
+    text-decoration:none;
+    /* color:#404040; */
+    margin: 0 14px;
+    transition:0.5s;
+}
+ul li a span {
+    position:absolute;
+    transition: transform .5s;
+}
+ul li a span:nth-child(1),
+ul li a span:nth-child(3){
+    width:100%;
+    height:3px;
+    background:#404040;
+}
+ul li a span:nth-child(1) {
+    top:0;
+    left:0;
+    transform-origin: right;
+}
+ul li a:hover span:nth-child(1) {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:transform .5s;
+}
+
+ul li a span:nth-child(3) {
+    bottom:0;
+    left:0;
+    transform-origin: left;
+}
+ul li a:hover span:nth-child(3) {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s;
+}
+
+ul li a span:nth-child(2),
+ul li a span:nth-child(4){
+    width:3px;
+    height:100%;
+    background:#404040;
+}
+ul li a span:nth-child(2) {
+    top:0;
+    left:0;
+    transform:scale(0);
+    transform-origin: bottom;
+}
+ul li a:hover span:nth-child(2) {
+    transform: scale(1);
+    transform-origin: top;
+    transition:transform .5s;
+}
+ul li a span:nth-child(4) {
+    top:0;
+    right:0;
+    transform:scale(0);
+    transform-origin: top;
+}
+ul li a:hover span:nth-child(4) {
+    transform: scale(1);
+    transform-origin: bottom;
+    transition:transform .5s;
+}
+
+.vk:hover {
+    /* color: #3b5998; */
+    color: #b3b3b3;
+}
+.vk:hover span { 
+    /* background: #3b5998; */
+    background: #b3b3b3;
+}
+.github:hover {
+    /* color: #1da1f2; */
+    color: #b3b3b3;
+}
+.github:hover span { 
+    /* background: #1da1f2; */
+    background: #b3b3b3;
+}
+.telegram:hover {
+    /* color: #c32aa3; */
+    color: #b3b3b3;
+}
+.telegram:hover span { 
+    /* background: #c32aa3; */
+    background: #b3b3b3;
+}
+.google:hover {
+    /* color: #dd4b39; */
+    color: #b3b3b3;
+}
+.google:hover span { 
+    /* background: #dd4b39; */
+    background: #b3b3b3;
+}
+ul li a .vk {
+    color: #1da1f2;
+}
+ul li a:hover:nth-child(3) {
+    color: #c32aa3;
+}
+ul li a:hover:nth-child(4) {
+    color: #dd4b39;
+}
+//===================================================================
+//===================================================================

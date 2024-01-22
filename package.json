@@ -1,0 +1,15 @@
+{
+  "name": "weld",
+  "version": "1.0.0",
+  "description": "https://vincentgarreau.com/particles.js/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}

@@ -1,0 +1,536 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow: hidden;
+  /* filter: sepia(20%); */
+}
+
+.center {
+  padding-left: calc(100vw - 520px);
+  padding-right: calc(100vw - 520px);
+}
+
+/* ------------------ */
+/* Стили для particles */
+/* ------------------ */
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+canvas {
+  display: block;
+  /* vertical-align: bottom; */
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Цвет фона */
+  background-color: #eaeaea;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  /* -webkit-user-select: none; */
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+/* ------------------ */
+/* Стили для header */
+/* ------------------ */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #db3535;
+  font-size: 24px;
+}
+a:hover {
+  color: #b3b3b3;
+}
+
+.site-header {
+  /* border: 1px solid #ccc; */
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 100;
+  width: 94vw;
+  margin: 30px;
+  border-radius: 10px;
+  /* background-color: rgb(110, 110, 110); */
+}
+
+.site-identity {
+  display: flex;
+  gap: 16px;
+}
+
+.site-navigation ul,
+.site-navigation li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation li {
+  display: inline-block;
+  margin: 1.4em 1em 1em 1em;
+}
+
+/* ------------------ */
+/* Стили для burger   */
+/* ------------------ */
+.burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  background: transparent;
+  /* width: 40px;
+  height: 26px; */
+  width: 45px;
+  height: 26px;
+  /* margin: 30px auto; */
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: #000;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #000;
+  transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+}
+
+.burger::after {
+  bottom: 0;
+  transition: bottom 0.3s 0.15s, transform 0.3s;
+}
+
+.burger-checkbox:checked + .burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+}
+
+.burger-checkbox:checked + .burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s, transform 0.3s 0.15s;
+}
+
+/* ------------------ */
+/* Стили для userform */
+/* ------------------ */
+option, select {
+  font-size: 18px;
+}
+
+.userform {
+  display: flex;
+  top: 89%;
+  left: 50%;
+  transform: translate(-39.5%, 30%);
+}
+.userform__box {
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userform__hidden {
+  visibility: hidden;
+}
+.userform__title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  color: #cf1e1e;
+  font-weight: normal;
+  font-size: 20px;
+}
+.userform__text {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+.userform__option {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.userform__select {
+  border: 2px solid #f2f2f2;
+  background-color: #fff;
+  font-size: 20px;
+}
+.userform__select-a {
+  width: 400px;
+  height: 50px;
+  line-height: 3em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  outline: none;
+}
+.userform__select-b {
+  width: 400px;
+  height: 50px;
+  line-height: 3em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  /* text-indent: 50%; */
+}
+.userform__select-c {
+  width: 400px;
+  height: 50px;
+  line-height: 3em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  /* text-indent: 50%; */
+}
+.userform__select-d {
+  width: 400px;
+  height: 50px;
+  line-height: 3em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  /* text-indent: 50%; */
+}
+.userform__select-i {
+  width: 400px;
+  height: 46px;
+  line-height: 3em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  outline: none;
+  /* text-indent: 50%; */
+}
+.userform__text {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+.userform__button {
+  width: 400px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: #db3535;
+  border-radius: 8px;
+  color: #d3d3d3;
+  border: 1px solid #d3d3d3;
+  font-size: 20px;
+}
+.userform__button:hover {
+  background-color: #8f8f8f;
+  /* width: 402px;
+  height: 52px; */
+  cursor: pointer;
+}
+
+input {
+  height: 50px;
+}
+
+:root {
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
+}
+
+button {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  /* font-family: "Source Code Pro"; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: var(--text-color);
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px;
+  z-index: 0;
+  overflow: hidden;
+}
+button:active {
+  background: #fff;
+  color: #000;
+}
+
+/* bubbles */
+/* button::before {
+    content: '';
+    pointer-events: none;
+    opacity: .6;
+    background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: bubbles 5s linear infinite both;
+} */
+/* @keyframes bubbles {
+    from {
+    transform: translate();
+    }
+    to {
+    transform: translate(0, -66.666%);
+    }
+} */
+.toggle-control {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  top: 19px;
+  left: 134px;
+  transform: translate(0%, 30%);
+}
+.toggle-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.toggle-control input:checked ~ .control {
+  background-color: #e36161;
+}
+.toggle-control input:checked ~ .control:after {
+  left: 30px;
+}
+.toggle-control .toggle-control input:checked ~ .userform__button {
+  background-color: rgb(237, 228, 56);
+}
+.toggle-control .control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 50px;
+  border-radius: 12.5px;
+  background-color: darkgray;
+  transition: background-color 0.15s ease-in;
+}
+.toggle-control .control:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 12.5px;
+  background: white;
+  transition: left 0.15s ease-in;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ebebeb;
+}
+
+ul {
+  position: absolute;
+  top: 89%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 46px;
+  /* font-size:40px; */
+  text-align: center;
+  text-decoration: none;
+  /* color:#404040; */
+  margin: 0 14px;
+  transition: 0.5s;
+}
+
+ul li a span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(1),
+ul li a span:nth-child(3) {
+  width: 100%;
+  height: 3px;
+  background: #404040;
+}
+
+ul li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+
+ul li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+ul li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(2),
+ul li a span:nth-child(4) {
+  width: 3px;
+  height: 100%;
+  background: #404040;
+}
+
+ul li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+
+ul li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+
+ul li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.vk:hover {
+  /* color: #3b5998; */
+  color: #b3b3b3;
+}
+
+.vk:hover span {
+  /* background: #3b5998; */
+  background: #b3b3b3;
+}
+
+.github:hover {
+  /* color: #1da1f2; */
+  color: #b3b3b3;
+}
+
+.github:hover span {
+  /* background: #1da1f2; */
+  background: #b3b3b3;
+}
+
+.telegram:hover {
+  /* color: #c32aa3; */
+  color: #b3b3b3;
+}
+
+.telegram:hover span {
+  /* background: #c32aa3; */
+  background: #b3b3b3;
+}
+
+.google:hover {
+  /* color: #dd4b39; */
+  color: #b3b3b3;
+}
+
+.google:hover span {
+  /* background: #dd4b39; */
+  background: #b3b3b3;
+}
+
+ul li a .vk {
+  color: #1da1f2;
+}
+
+ul li a:hover:nth-child(3) {
+  color: #c32aa3;
+}
+
+ul li a:hover:nth-child(4) {
+  color: #dd4b39;
+}/*# sourceMappingURL=style.css.map */
