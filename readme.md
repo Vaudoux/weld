@@ -2,7 +2,7 @@
 <h2 align="center">
 
 <img src="[!](https://github.com/Vaudoux/weld/blob/main/assets/demoTitle.gif?raw=true)" width="400" />
-![alt-text]([link](https://github.com/Vaudoux/weld/blob/main/assets/demoTitle.gif?raw=true))
+![alt-text]([link](https://github.com/Vaudoux/weld/blob/main/assets/demoTitle.gif?raw=true)
 
 <h2 align="center">Веб приложение рассчета расхода сварочных материалов</h1>
 
