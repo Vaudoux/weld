@@ -1,6 +1,6 @@
 <h1 align="center">Weld-Weld-Weld</h1>
 <h2 align="center">
-
+<img src="assets/demoTitle.gif" width="350"/>
 
 
 
