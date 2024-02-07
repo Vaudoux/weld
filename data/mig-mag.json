@@ -1,0 +1,52 @@
+[
+  {
+    "C1": {
+      "РД": {},
+      "МП": {
+        "0,5": {
+          "gap": 0.5,
+          "weldWidth": 4,
+          "gainHeight": 1
+        },
+        "1": {
+          "gap": 0.5,
+          "weldWidth": 5.5,
+          "gainHeight": 1
+        },
+        "1,5": {
+          "gap": 1,
+          "weldWidth": 6,
+          "gainHeight": 1
+        },
+        "2": {
+          "gap": 1,
+          "weldWidth": 7,
+          "gainHeight": 1
+        },
+        "2,5": {
+          "gap": 1,
+          "weldWidth": 8,
+          "gainHeight": 1
+        },
+        "3": {
+          "gap": 1,
+          "weldWidth": 9,
+          "gainHeight": 1
+        },
+        "3,5": {
+          "gap": 1,
+          "weldWidth": 10,
+          "gainHeight": 1
+        },
+        "4": {
+          "gap": 1,
+          "weldWidth": 11,
+          "gainHeight": 1
+        }
+      },
+      "РАД": {},
+      "АФ": {}
+    },
+    "C28": {}
+  }
+]
