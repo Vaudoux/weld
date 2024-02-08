@@ -1,6 +1,6 @@
 //Заполнение полей при выборе
 window.addEventListener("load", function (e) {
-  //Отлов HTML айтемов
+  //---Отлов HTML айтемов---
   const weldingMethod = document.getElementById("weldingMethod");
   const technicalDocumentation = document.getElementById(
     "technicalDocumentation"
@@ -9,11 +9,11 @@ window.addEventListener("load", function (e) {
   const thicknessList = document.getElementById("thicknessList");
   const cuttingAngleValue = this.document.getElementById("cuttingAngle");
 
-  //Определение нормативно технической документации
+  //---Определение нормативно технической документации---
   weldingMethod.addEventListener("change", function () {
     let selectedWeldingMethod = this.value;
     technicalDocumentation.innerHTML = "";
-    //РД
+    //---РД---
     if (selectedWeldingMethod === "MMA Ручная дуговая сварка РД") {
       let optionFirst = document.createElement("option");
       optionFirst.value = "";
@@ -29,7 +29,7 @@ window.addEventListener("load", function (e) {
       optionThird.value = "ГОСТ 11534";
       optionThird.innerText = "ГОСТ 11534";
       technicalDocumentation.appendChild(optionThird);
-      //МП
+      //---МП---
     } else if (
       selectedWeldingMethod === "MIG/MAG Полуавтоматическая сварка МП"
     ) {
@@ -47,7 +47,7 @@ window.addEventListener("load", function (e) {
       optionThird.value = "ГОСТ 23518";
       optionThird.innerText = "ГОСТ 23518";
       technicalDocumentation.appendChild(optionThird);
-      //РАД
+      //---РАД---
     } else if (
       selectedWeldingMethod === "TIG Ручная аргонодуговая сварка РАД"
     ) {
@@ -149,7 +149,7 @@ window.addEventListener("load", function (e) {
       selectedWeldingMethod === "MIG/MAG Полуавтоматическая сварка МП" &&
       technicalDocumentation.value === "ГОСТ 14771"
     ) {
-      let typeOfConnectionArray5264 = [
+      let typeOfConnectionArray14771 = [
         "",
         "С1",
         "С28",
@@ -199,7 +199,7 @@ window.addEventListener("load", function (e) {
         "Н1",
         "Н2",
       ];
-      typeOfConnectionArray5264.forEach(function (value) {
+      typeOfConnectionArray14771.forEach(function (value) {
         let optionElement = document.createElement("option");
         optionElement.value = value;
         optionElement.innerText = value;
@@ -207,6 +207,13 @@ window.addEventListener("load", function (e) {
       });
     }
   });
+  //----------------------------------------------------------------------------------------------
+
+  //----------------------------------------------------------------------------------------------
+
+  //----------------------------------------------------------------------------------------------
+
+  //----------------------------------------------------------------------------------------------
 
   //Формирование списка толщин для C1 ГОСТ 5264
   typeOfConnection.addEventListener("change", function () {
@@ -333,6 +340,30 @@ window.addEventListener("load", function (e) {
         "10",
         "11",
         "12",
+      ];
+      thicknessList.innerText = "";
+      thicknessListC1.forEach(function (value) {
+        let optionElement = document.createElement("option");
+        optionElement.value = value;
+        optionElement.innerText = value;
+        thicknessList.appendChild(optionElement);
+      });
+      cuttingAngleValue.value = "Без скоса";
+    } else if (
+      selectedWeldingMethod === "MIG/MAG Полуавтоматическая сварка МП" &&
+      technicalDocumentation.value === "ГОСТ 14771" &&
+      typeOfConnection.value === "С3"
+    ) {
+      let thicknessListC1 = [
+        "",
+        "0.5",
+        "1",
+        "1.5",
+        "2",
+        "2.5",
+        "3",
+        "3.5",
+        "4",
       ];
       thicknessList.innerText = "";
       thicknessListC1.forEach(function (value) {
